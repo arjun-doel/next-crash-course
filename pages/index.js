@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import ArticleList from '../components/ArticleList'
 
 export default function Home({articles}) {
   return (
@@ -7,7 +8,7 @@ export default function Home({articles}) {
         <title>WebDev Newz</title>
         <meta name='keywords' content='web dev, programming'/>
       </Head>
-      {articles.map(ite => <h3 key={ite.id}>{ite.title}</h3>)}
+      <ArticleList articles={articles}/>
     </div>
   )
 }
